@@ -2,8 +2,8 @@
 ## Rover Repair Garage overview:
 This technical doc will go over the 4 main segments of code that make the land rover repair log function.
 
-- [Main menu](#Main-menu-explained:)
-- [Logging repairs](#Logging-repairs-explained:)
+- [Main menu](#main-menu-explained:)
+- [Logging repairs](#logging-repairs-explained:)
 - Viewing repairs
 - Showing all different parts
 
