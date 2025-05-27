@@ -14,7 +14,6 @@ This code segment consists of only print statements that show the user options t
 ```
 print("\n------Rover Repair log------")
 print("1. Log a repair")
-
 ```
 
 
@@ -58,3 +57,7 @@ if log:
     except FileNotFoundError:
         print("No repairs logged")
 ```
+
+
+## Showing all different parts explained:
+This procedure is essentially the glue that pieces each other procedure together and lets them work together. In a while loop, asking while the procedure is being called is true, it will show the main menu procedure and aska user to input a number 1-3 for each option you can do. Using an if statement it asks if the user input variable `big_choice` is equal to 1 and if it is, it will display the `log_repair()` procedure. Using an elif statement it asks if the user input variable `big_choice` is equal to 2 and if it is, it will display the `repair_viewer` procedure
