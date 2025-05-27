@@ -38,3 +38,13 @@ Then within an if statement, asking if strings were created from text within the
             log = fi.readlines()`
 
 This procedure is within a try-except statement incase there is not a repairs text file created by the previous procedure, telling the user that there is no repairs logged if there is a FileNotFoundError.
+
+`if log:
+        print("\n----Repair Logs----")
+        for entry in log:
+                    print(entry.strip())
+            else:
+                 print("No repairs logged.")
+    except FileNotFoundError:
+        print("No repairs logged")
+`
