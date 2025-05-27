@@ -18,7 +18,7 @@ print("1. Log a repair")
 
 
 ## Logging repairs explained:
-This procedure calls for 3 user inputs, rover id, the issue with the rover, and how it was fixed. Then the procedure creates a text file, opening it asd the variable "fi" with the write mode using the "W" variable. Then the code will write in the text file the rover id, the problem with the rover, and the fix for it using the user inputs from before. 
+This procedure calls for 3 user inputs, rover id, the issue with the rover, and how it was fixed. Then the procedure creates a text file, opening it as the variable `fi` with the append mode using the "a" variable. Then the code will write in the text file the rover id, the problem with the rover, and the fix for it using the user inputs from before. 
 
 ```
  with open("Repairs.txt", "a") as fi:
@@ -29,7 +29,7 @@ Once the with statement ends, the code will print that the repair is logged.
 
 
 ## Viewing repairs explained:
-This procedure calls to open the "Repairs.txt" file created from the logging repairs procedure in the read mode ("r") as "fi" again. The varaible log is created to store the strings created from the `.readlines` method. `.readlines` reads any text from the text file and then converts them into strings.
+This procedure calls to open the "Repairs.txt" file created from the logging repairs procedure in the read mode ("r") as `fi` again. The varaible log is created to store the strings created from the `.readlines` method. `.readlines` reads any text from the text file and then converts them into strings.
 
 ```
 with open("Repairs.txt", "r") as fi:
@@ -45,7 +45,7 @@ def repair_viewer():
             log = fi.readlines()
 ```
 
-This procedure is within a try-except statement incase there is not a repairs text file created by the previous procedure, telling the user that there is no repairs logged if there is a FileNotFoundError.
+This procedure is within a try-except statement incase there is not a repairs text file created by the previous procedure, telling the user that there is no repairs logged if there is a `FileNotFoundError`.
 
 ```
 if log:
