@@ -29,14 +29,14 @@ Once the with statement ends, the code will print that the repair is logged.
 
 
 ## Viewing repairs explained:
-This procedure calls to open the "Repairs.txt" file created from the logging repairs procedure in the read mode ("r") as "fi" again. The varaible log is created to store the strings created from the .readlines method. .readlines reads any text from the text file and then converts them into strings.
+This procedure calls to open the "Repairs.txt" file created from the logging repairs procedure in the read mode ("r") as "fi" again. The varaible log is created to store the strings created from the `.readlines` method. `.readlines` reads any text from the text file and then converts them into strings.
 
 ```
 with open("Repairs.txt", "r") as fi:
             log = fi.readlines()
 ```
 
-Then within an if statement, asking if strings were created from text within the file, it will print the title of the section "Repair logs" and then asks within a for statement that for each string created by .readlines() will be cleaned by the .strip() function, removing any spaces, tabs, or newline functions like \n which was in the write statement from the previous procedure. 
+Then within an if statement, asking if strings were created from text within the file, it will print the title of the section "Repair logs" and then asks within a for statement that for each string created by `.readlines()` will be cleaned by the `.strip()` function, removing any spaces, tabs, or newline functions like `\n` which was in the write statement from the previous procedure. 
 
 ```
 def repair_viewer():
@@ -60,4 +60,15 @@ if log:
 
 
 ## Showing all different parts explained:
-This procedure is essentially the glue that pieces each other procedure together and lets them work together. In a while loop, asking while the procedure is being called is true, it will show the main menu procedure and aska user to input a number 1-3 for each option you can do. Using an if statement it asks if the user input variable `big_choice` is equal to 1 and if it is, it will display the `log_repair()` procedure. Using an elif statement it asks if the user input variable `big_choice` is equal to 2 and if it is, it will display the `repair_viewer` procedure
+This procedure is essentially the glue that pieces each other procedure together and lets them work together. In a while loop, asking while the procedure is being called is true, it will show the main menu procedure and aska user to input a number 1-3 for each option you can do. Using an if statement it asks if the user input variable `big_choice` is equal to 1 and if it is, it will display the `log_repair()` procedure. 
+```
+def main_thing():
+    while True:
+        the_menu()
+        big_choice = input("Select an option (1-3): ")
+        if big_choice == "1": 
+             log_repair()
+```
+
+Using an elif statement it asks if the user input variable `big_choice` is equal to 2 and if it is, it will display the `repair_viewer` procedure. 
+Using another elif statement it asks if the user input variable `big_choice` is equal to 3 and if it is, it will print that the user is exiting the program and then the code will stop using the `break` function
