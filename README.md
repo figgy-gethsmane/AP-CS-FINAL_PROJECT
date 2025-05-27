@@ -17,6 +17,8 @@ This code segment consists of only print statements that show the user options t
 
 ## Logging repairs explained:
 This procedure calls for 3 user inputs, rover id, the issue with the rover, and how it was fixed. Then the procedure creates a text file, opening it asd the variable "fi" with the write mode using the "W" variable. Then the code will write in the text file the rover id, the problem with the rover, and the fix for it using the user inputs from before. 
+
  `with open("Repairs.txt", "a") as fi:
         fi.write(f"Rover ID: {rov_id} | Issue: {iss} | Fix: {fix} \n")`
+  
 Once the with statement ends, the code will print that the repair is logged.
