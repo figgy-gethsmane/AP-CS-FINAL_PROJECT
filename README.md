@@ -2,8 +2,8 @@
 ## Rover Repair Garage overview:
 This technical doc will go over the 4 main segments of code that make the land rover repair log function.
 
-- [Main menu](#main-menu-explained:)
-- [Logging repairs](#logging-repairs-explained:)
+- [Main menu](#main-menu-explained)
+- [Logging repairs](#logging-repairs-explained)
 - Viewing repairs
 - Showing all different parts
 
@@ -22,3 +22,7 @@ This procedure calls for 3 user inputs, rover id, the issue with the rover, and 
         fi.write(f"Rover ID: {rov_id} | Issue: {iss} | Fix: {fix} \n")`
   
 Once the with statement ends, the code will print that the repair is logged.
+
+
+## Viewing repairs explained:
+This procedure calls to open the "Repairs.txt" file created from the logging repairs procedure in the read mode ("r") as "fi" again. The varaible log is created to store the strings created from the .readlines method. .readlines reads any text from the text file and then converts them into strings. Then within an if statement, asking if strings were created from text within the file, it will print the title of the section "Repair logs" and then asks within a for statement for each string created 
