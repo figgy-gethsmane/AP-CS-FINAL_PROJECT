@@ -33,10 +33,10 @@ This procedure calls to open the "Repairs.txt" file created from the logging rep
 Then within an if statement, asking if strings were created from text within the file, it will print the title of the section "Repair logs" and then asks within a for statement that for each string created by .readlines() will be cleaned by the .strip() function, removing any spaces, tabs, or newline functions like \n which was in the write statement from the previous procedure. 
 
 `if log:
-                print("\n----Repair Logs----")
-                for entry in log:
-                    print(entry.strip())
-            else:
-                 print("No repairs logged.")`
+       print("\n----Repair Logs----")`
+                ``for entry in log:``
+                    ``print(entry.strip())``
+            ``else:``
+                 ``print("No repairs logged.")``
 
 This procedure is within a try-except statement incase there is not a repairs text file created by the previous procedure, telling the user that there is no repairs logged if there is a FileNotFoundError.
